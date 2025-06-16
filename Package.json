@@ -1,0 +1,35 @@
+{
+  "name": "maternal-child-health-system",
+  "version": "1.0.0",
+  "description": "ระบบติดตามการดูแลสุขภาพแม่และเด็ก",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "googleapis": "^126.0.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "healthcare",
+    "maternal",
+    "child",
+    "gis",
+    "google-sheets"
+  ],
+  "author": "Fz",
+  "license": "MIT"
+}
